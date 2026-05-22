@@ -6,8 +6,13 @@ on:
        description: to provide input variables
        required: true
        default: dev
+       type: choice
+       options: 
+           - dev
+           - test
+           - prod
 jobs:
-  printthevalue:
+  printthevalue:  
     runs-on: ubuntu-latest
 
     steps:
