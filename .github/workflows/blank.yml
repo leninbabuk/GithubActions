@@ -1,0 +1,9 @@
+name: How to user variables and secrets
+on: workflow_dispatch
+jobs:
+  credentials:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: To print Docker User id
+        run: echo "Docker user name is ${{ vars.DOCKERLOGINID }}"
+        
