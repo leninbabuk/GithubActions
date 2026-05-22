@@ -8,11 +8,13 @@ jobs:
         run: echo "Compiled the source code."
   test:
     runs-on: ubuntu-latest
+    needs: compile
     steps:
       - name: To test the source code
         run: echo "Tested the source code"
   deploy:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: To deploy the source code
         run: echo "Source code id deployed"
