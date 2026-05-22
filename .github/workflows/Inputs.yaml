@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: To print the environment value
-        run: echo "Your app is connecting to the ${{ inputs.environment }}
+        run: echo "Your app is connecting to the ${{ inputs.environment }}"
 
         
     
