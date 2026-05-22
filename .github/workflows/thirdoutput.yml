@@ -1,0 +1,17 @@
+name:  third example of outputs
+on: workflow_dispatch
+jobs:
+  job1: 
+    runs-on: ubuntu-latest
+    outputs:
+      result: ${{ steps.newid.outputs.name }}
+    steps:
+    - name: to capture the output
+      id:  newid
+      run: echo "name=LeninBabuKollabathula" >> $GITHUB_OUTPUT
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps: 
+      - name: To pring the value from the job1
+        run: echo "The value from the job1 is ${{ needs.job1.outputs.result }}"
