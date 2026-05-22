@@ -7,5 +7,5 @@ jobs:
       - name: To print Docker User id
         run: |
           echo "Docker user name is ${{ vars.DOCKERLOGINID }}"
-          echo "Docker user name is ${{ secrets.DOCKERLOGINID }}"
+          echo "Docker password is ${{ secrets.DOCKERLOGINID }}"
 
